@@ -65,9 +65,7 @@ pnpm preview     # Preview production build locally
 
 ## 🖼️ Screenshots
 
-![Todo App Screenshot](./public/assets/screenshot.png)
-
-
+![Todo App Screenshot](/public/assets/screenshot.png)
 
 ## 📌 Todos
 
