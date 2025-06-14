@@ -8,6 +8,8 @@
 @layer base {
   body{
     font-family: 'Inter', sans-serif;
+    color: #5B6097;
+    @apply dark:text-[#F1F2F9]
   }
 }
 
@@ -17,13 +19,13 @@
   }
   /* #54C1AD */
   .pending-button{
-    @apply text-[#FEFEFB] rounded-[1406.64px] w-[92px] h-[42px] bg-[#FDBF46] cursor-pointer hover:scale-105 duration-300 transition-transform
+    @apply text-[#FEFEFB] rounded-[1406.64px] w-[92px] h-[42px] bg-[#FDBF46] dark:bg-[#FFCC4D] cursor-pointer hover:scale-105 duration-300 transition-transform
   }
   .completed-button{
-    @apply text-[#FEFEFB] rounded-[1406.64px] w-[92px] h-[42px] bg-[#F06A6D] cursor-pointer hover:scale-105 duration-300 transition-transform
+    @apply text-[#FEFEFB] rounded-[1406.64px] w-[92px] h-[42px] bg-[#F2706D] dark:bg-[#FF6B6B] cursor-pointer hover:scale-105 duration-300 transition-transform
   }
   .add-button{
-    @apply text-[#FEFEFB] rounded-[1406.64px] w-[92px] h-[42px] bg-[#5B6097] cursor-pointer hover:scale-105 duration-300 transition-transform 
+    @apply text-[#FEFEFB] rounded-[1406.64px] w-[92px] h-[42px] bg-[#5B6097] dark:bg-[#A3A3B9] cursor-pointer hover:scale-105 duration-300 transition-transform 
   }
   .line{
     @apply text-[#A3A3B9] w-[986.01px] h-[1px] bg-[#A3A3B9];

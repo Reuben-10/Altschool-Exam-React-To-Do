@@ -18,7 +18,7 @@ const Header = () => {
 
     if (loading) {
         return (
-            <header className='flex flex-col md:flex-row justify-center items-center gap-3 p-3 my-2 bg-[#FEFEFB]'>
+            <header className='flex flex-col md:flex-row justify-center items-center gap-3 p-3 my-2 bg-[#FEFEFB] dark:bg-[#1E1E1E]'>
                 <Skeleton className="w-full md:w-[385px] h-[49px] rounded-[49.41px]" />
                 <div className='flex flex-wrap gap-2 w-full md:w-auto justify-center'>
                     <Skeleton className="w-[70px] h-[40px] rounded" />
@@ -36,7 +36,7 @@ const Header = () => {
                 <input
                     type="text"
                     placeholder='Search todos...'
-                    className='w-full md:w-[385px] h-[45px] px-3 border border-[#A3A3B9] rounded-[49.41px] focus:outline-none focus:shadow-[#FDBF46] shadow-sm'
+                    className='w-full md:w-[385px] h-[45px] px-3 border border-[#A3A3B9] rounded-[49.41px] focus:outline-none focus:shadow-[#FDBF46] dark:focus:shadow-[#FFD26F] shadow-sm'
                     value={searchTerm}
                     onChange={handleSearchChange}
                 />

@@ -174,7 +174,7 @@ const ToDoListPage = () => {
       {/* Modal for adding a new todo */}
       {showAddModal && (
         <div className="fixed inset-0 z-50 flex items-center justify-center bg-[#00000033] backdrop-blur-sm">
-          <div className="bg-white rounded-[44px] shadow-2xl p-6 sm:p-8 w-[90vw] max-w-md flex flex-col items-center border border-[#FDBF46]">
+          <div className="bg-[#FEFEFB] dark:bg-[#1E1E1E] rounded-[44px] shadow-2xl p-6 sm:p-8 w-[90vw] max-w-md flex flex-col items-center border border-[#FDBF46] dark:border-[#53462b]">
             <img
               src="/assets/quill_todo.svg"
               alt="Add Todo"
@@ -190,7 +190,7 @@ const ToDoListPage = () => {
               type="text"
               value={modalInput}
               onChange={(e) => setModalInput(e.target.value)}
-              className="w-full py-2 sm:py-3 px-3 sm:px-4 border border-[#A3A3B9] rounded-[49.41px] focus:outline-none focus:border-[#FDBF46] mb-4 text-[#5B6097] bg-[#FEFEFB] placeholder-[#A3A3B9]"
+              className="w-full py-2 sm:py-3 px-3 sm:px-4 border border-[#A3A3B9] rounded-[49.41px] focus:outline-none focus:border-[#FDBF46] mb-4 text-[#5B6097] bg-[#FEFEFB] placeholder-[#A3A3B9] dark:bg-transparent dark:text-[#FEFEFB]"
               placeholder="Enter todo..."
               autoFocus
               maxLength={100}
@@ -351,7 +351,7 @@ const ToDoListPage = () => {
 
                 {/* View icon */}
                 <div className="w-[30px] sm:w-[40px] flex justify-center">
-                  <Link to={`/todos/${todo.id}`} className="text-blue-500">
+                  <Link to={`/todos/${todo.id}`} className="text-blue-500 hover:scale-115 duration-300 transition-transform">
                     <Icon
                       icon="mdi:eye-outline"
                       width="20"
@@ -368,7 +368,7 @@ const ToDoListPage = () => {
                     icon="mynaui:edit-one"
                     width="20"
                     height="20"
-                    className="sm:w-6 sm:h-6"
+                    className="sm:w-6 sm:h-6 cursor-pointer hover:scale-115 duration-300 transition-transform"
                     style={{ color: "#FDBF46" }}
                     onClick={() => {
                       setEditingId(todo.id);

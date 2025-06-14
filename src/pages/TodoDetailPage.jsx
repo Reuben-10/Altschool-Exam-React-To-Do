@@ -130,9 +130,9 @@ const TodoDetailPage = () => {
 
   // Main render
   return (
-    <main className="w-full max-w-lg mx-auto p-4 sm:p-8 bg-white rounded-3xl shadow-lg border border-gray-200 mt-6 sm:mt-12">
+    <main className="w-full max-w-lg mx-auto p-4 sm:p-8 bg-transparent rounded-3xl shadow-lg border border-[#FDBF46] dark:border-[#53462b] mt-6 sm:mt-12">
       {/* Header with title and back link */}
-      <header className="mb-6 sm:mb-8 flex flex-col sm:flex-row justify-between items-center gap-2">
+      <header className="mb-6 sm:mb-8 flex flex-col sm:flex-row justify-between items-center gap-2 ">
         <h2 className="text-xl sm:text-2xl font-bold text-gray-800 tracking-tight">Todo Details</h2>
         <Link to="/" className="text-base text-blue-600 hover:underline font-medium">
           ← Back
@@ -140,7 +140,7 @@ const TodoDetailPage = () => {
       </header>
 
       {/* Todo details section */}
-      <section className="p-4 sm:p-6 bg-gray-50 rounded-2xl shadow-sm border border-gray-100 flex flex-col items-center gap-6 sm:gap-8">
+      <section className="p-4 sm:p-6 bg-transparent rounded-2xl shadow-sm border flex flex-col items-center gap-6 sm:gap-8 border-[#FDBF46] dark:border-[#53462b]">
         {/* If editing, show form */}
         {isEditing ? (
           <form
