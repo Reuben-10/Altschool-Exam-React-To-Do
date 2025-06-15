@@ -103,7 +103,7 @@ const TodoDetailPage = () => {
   // Show loading skeleton while loading
   if (loading) {
     return (
-      <main className="w-full max-w-lg mx-auto p-4 sm:p-8 bg-white rounded-3xl shadow-lg border border-gray-200 mt-6 sm:mt-12 flex flex-col items-center">
+      <main className="w-full max-w-lg mx-auto p-4 sm:p-8 bg-white rounded-3xl shadow-lg border border-gray-200 mt-6 sm:mt-12 flex flex-col items-center dark:bg-transparent">
         <div className="w-full flex flex-col items-center p-4 sm:p-8">
           <Skeleton className="w-16 h-16 mb-4 rounded-full" />
           <Skeleton className="h-8 w-2/3 mb-4 rounded-xl" />

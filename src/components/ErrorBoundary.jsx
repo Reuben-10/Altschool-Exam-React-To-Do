@@ -1,4 +1,5 @@
 import { Component } from 'react';
+import { Link } from 'react-router-dom';
 
 // ErrorBoundary for ToDoListPage and other React components
 export class ErrorBoundary extends Component {
@@ -23,16 +24,22 @@ export class ErrorBoundary extends Component {
   render() {
     if (this.state.hasError) {
       return (
-        <div className="flex items-center justify-center min-h-screen bg-gray-50 px-4">
-          <div className="w-full max-w-lg bg-white rounded-3xl shadow-xl border border-red-100 p-8 sm:p-10">
+        <div className="flex items-center justify-center min-h-screen bg-gray-50 dark:bg-[#1E1E1E] px-4">
+          <div className="w-full max-w-lg bg-white dark:bg-[#232323] rounded-3xl shadow-xl border border-red-100 dark:border-red-400 p-8 sm:p-10">
             <div className="flex flex-col items-center">
-              <div className="flex items-center justify-center w-16 h-16 rounded-full bg-red-50 mb-4">
+              <Link
+                to="/"
+                className="self-start mb-4 text-base text-blue-400 hover:underline font-medium"
+              >
+                ← Back
+              </Link>
+              <div className="flex items-center justify-center w-16 h-16 rounded-full bg-red-50 dark:bg-red-900 mb-4">
                 <svg className="w-8 h-8 text-red-500" fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" d="M12 9v2m0 4h.01M21 12c0 4.97-4.03 9-9 9s-9-4.03-9-9 4.03-9 9-9 9 4.03 9 9z" />
                 </svg>
               </div>
-              <h1 className="text-2xl sm:text-3xl font-extrabold text-red-600 mb-2 text-center">Something went wrong</h1>
-              <p className="mt-2 text-gray-700 text-base sm:text-lg text-center">
+              <h1 className="text-2xl sm:text-3xl font-extrabold text-red-500 mb-2 text-center">Something went wrong</h1>
+              <p className="mt-2 text-gray-700 dark:text-gray-200 text-base sm:text-lg text-center">
                 {this.state.error?.message || 'An unexpected error occurred.'}
               </p>
               <button

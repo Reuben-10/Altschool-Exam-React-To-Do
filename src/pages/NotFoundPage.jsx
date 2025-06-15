@@ -1,9 +1,11 @@
+import { ThemeProvider } from '@/components/theme-provider'
 import { Link } from 'react-router-dom'
 
 export default function NotFoundPage() {
   return (
-    <div className="flex flex-col items-center justify-center min-h-[80vh] bg-[#FEFEFB]">
-      <div className="bg-white rounded-[44px] shadow-xl border border-[#FDBF46] px-12 py-16 flex flex-col items-center">
+    <ThemeProvider>
+    <div className="flex flex-col items-center justify-center min-h-[80vh] bg-[#FEFEFB] dark:bg-[#1E1E1E]">
+      <div className="bg-white dark:bg-[#1E1E1E] rounded-[44px] shadow-xl border border-[#FDBF46] dark:border-[#53462b] px-12 py-16 flex flex-col items-center">
         <img src="/assets/quill_todo.svg" alt="Not Found" className="w-16 h-16 mb-4" />
         <h1 className="text-5xl font-bold text-[#5B6097] mb-2">404</h1>
         <h2 className="text-2xl font-semibold text-[#FDBF46] mb-2">Page Not Found</h2>
@@ -18,5 +20,6 @@ export default function NotFoundPage() {
         </Link>
       </div>
     </div>
+    </ThemeProvider>
   )
 }

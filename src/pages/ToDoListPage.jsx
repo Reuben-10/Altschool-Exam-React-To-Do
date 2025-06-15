@@ -2,7 +2,7 @@ import React from "react";
 import { useMutation, useQuery, useQueryClient } from "@tanstack/react-query";
 import { createTodo, fetchAllTodos, updateTodo, deleteTodo } from "../api/todo";
 import { useTodoStore } from "../store/useTodoStore";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import { Icon } from "@iconify/react";
 import { useEffect } from "react";
@@ -12,7 +12,7 @@ import { ModeToggle } from "@/components/mode-toggle";
 // Skeleton loader for header (just for loading effect)
 function HeaderSkeleton() {
   return (
-    <div className="flex items-center px-4 sm:px-8 py-8 sm:py-12 w-full max-w-3xl sm:max-w-4xl mx-auto">
+    <div className="flex items-center px-4 sm:px-8 py-8 sm:py-12 w-full max-w-3xl sm:max-w-4xl mx-auto dark:bg-transparent">
       <div className=" rounded-[1406.64px] w-[92px] h-[42px] bg-[#F6F6F9] sm:w-24 mr-2 sm:mr-4 animate-pulse" style={{ minWidth: "110px" }} />
       <div className="w-[986.01px] h-[4px] bg-[#F6F6F9]" />
     </div>
@@ -166,6 +166,8 @@ const ToDoListPage = () => {
     if (typeof text !== "string") return "";
     return text.length > maxLength ? text.slice(0, maxLength) + "..." : text;
   }
+
+  const navigate = useNavigate();
 
   
   return (
@@ -409,6 +411,16 @@ const ToDoListPage = () => {
           </button>
         </div>
       </div>
+
+      <div className="flex justify-center my-4">
+      <Button
+        className="bg-[#F2706D] hover:bg-red-600 text-white rounded-[44px] px-10 py-3 font-semibold shadow"
+        onClick={() => navigate("/error-boundary")}
+      >
+        Open Error Boundary Page
+      </Button>
+    </div>
+
     </section>
     </>
   );
