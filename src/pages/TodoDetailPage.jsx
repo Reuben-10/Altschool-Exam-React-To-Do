@@ -120,13 +120,13 @@ const TodoDetailPage = () => {
   }
 
   // Show message if todo not found
-  if (!todo) {
-    return (
-      <main className="w-full max-w-lg mx-auto p-4 sm:p-8 bg-white rounded-3xl shadow-lg border border-gray-200 mt-6 sm:mt-12 flex flex-col items-center">
-        <div className="text-gray-500 text-center">Todo not found.</div>
-      </main>
-    );
-  }
+  // if (!todo) {
+  //   return (
+  //     <main className="w-full max-w-lg mx-auto p-4 sm:p-8 bg-white rounded-3xl shadow-lg border border-gray-200 mt-6 sm:mt-12 flex flex-col items-center">
+  //       <div className="text-gray-500 text-center">Todo not found.</div>
+  //     </main>
+  //   );
+  // }
 
   // Main render
   return (
