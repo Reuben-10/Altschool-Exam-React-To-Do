@@ -133,7 +133,7 @@ const TodoDetailPage = () => {
     <main className="w-full max-w-lg mx-auto p-4 sm:p-8 bg-transparent rounded-3xl shadow-lg border border-[#FDBF46] dark:border-[#53462b] mt-6 sm:mt-12">
       {/* Header with title and back link */}
       <header className="mb-6 sm:mb-8 flex flex-col sm:flex-row justify-between items-center gap-2 ">
-        <h2 className="text-xl sm:text-2xl font-bold text-gray-800 tracking-tight">Todo Details</h2>
+        <h2 className="text-xl sm:text-2xl font-bold text-[#5B6097] tracking-tight">Todo Details</h2>
         <Link to="/" className="text-base text-blue-600 hover:underline font-medium">
           ← Back
         </Link>
@@ -187,9 +187,9 @@ const TodoDetailPage = () => {
           // If not editing, show todo details
           <>
             <div className="flex flex-col items-center gap-2 w-full">
-              <h3 className="text-lg sm:text-xl font-semibold text-gray-800 text-center break-words max-w-full">{todo.todo}</h3>
+              <h3 className="text-lg sm:text-xl font-semibold text-[#5B6097] text-center break-words max-w-full">{todo.todo}</h3>
               {todo.description && (
-                <p className="text-sm sm:text-base text-gray-600 text-center mt-2 break-words max-w-full">{todo.description}</p>
+                <p className="text-sm sm:text-base text-[#5B6097] text-center mt-2 break-words max-w-full">{todo.description}</p>
               )}
               <span className="text-xs text-gray-400 mt-1">
                 {/* Show created date or fallback */}

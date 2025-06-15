@@ -10,7 +10,7 @@ const Navbar = () => {
                     alt="Todo List Logo"
                     className="w-[37px] h-[37px]"
                 />
-                <span className=' text-[24px] font-bold text-[#353644]'>ToDo List</span>
+                <span className=' text-[24px] font-bold text-[#353644] dark:text-[#E5E6FF]'>ToDo List</span>
             </div>
             <div className="mt-3">
                 <ModeToggle />
